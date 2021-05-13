@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./Montserrat-Normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: italic;
+  src: url('./Montserrat-NormalItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: normal;
+  src: url('./Montserrat-SemiBold.woff') format('woff');
+}
