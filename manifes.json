@@ -1,0 +1,12 @@
+{
+  "name": "Сайт-портфолио Андрея Бурлакова",
+  "short_name": "Бурлаков А.",
+  "icons": [{
+    "src": "google-touch-icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "display": "standalone",
+  "background_color": "#eae7dc",
+  "theme_color": "#eae7dc"
+}

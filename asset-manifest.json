@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd835a63.chunk.css",
+    "main.js": "/static/js/main.d2fd016b.chunk.js",
+    "main.js.map": "/static/js/main.d2fd016b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d0605945.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
+    "static/js/2.ffbd2620.chunk.js": "/static/js/2.ffbd2620.chunk.js",
+    "static/js/2.ffbd2620.chunk.js.map": "/static/js/2.ffbd2620.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.bd835a63.chunk.css.map": "/static/css/main.bd835a63.chunk.css.map",
+    "static/js/2.ffbd2620.chunk.js.LICENSE.txt": "/static/js/2.ffbd2620.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Montserrat-SemiBold.54fa27fd.woff",
+    "static/media/portfolio.css": "/static/media/background.356e3f5e.jpg",
+    "static/media/code_logo.b647b4e6.svg": "/static/media/code_logo.b647b4e6.svg",
+    "static/media/funbox_test.bfbd96ac.png": "/static/media/funbox_test.bfbd96ac.png",
+    "static/media/hexagon.96f1a179.svg": "/static/media/hexagon.96f1a179.svg",
+    "static/media/learn_to_learn.d9bb6b96.png": "/static/media/learn_to_learn.d9bb6b96.png",
+    "static/media/me.da22e992.jpg": "/static/media/me.da22e992.jpg",
+    "static/media/news-machine.60a91151.png": "/static/media/news-machine.60a91151.png",
+    "static/media/travel_to_russia.ec3597e9.png": "/static/media/travel_to_russia.ec3597e9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0605945.js",
+    "static/js/2.ffbd2620.chunk.js",
+    "static/css/main.bd835a63.chunk.css",
+    "static/js/main.d2fd016b.chunk.js"
+  ]
+}
