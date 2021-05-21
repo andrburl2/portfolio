@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Portfolio from '../portfolio/portfolio.jsx';
 import Perks from '../perks/perks.jsx';
 import Description from '../description/description.jsx';
-import Contacts from '../contacts/contacts.jsx';
 import './main.css';
 
 export default class Main extends Component {
@@ -12,7 +11,6 @@ export default class Main extends Component {
         <Description />
         <Perks />
         <Portfolio />
-        <Contacts />
       </main>
     )
   }

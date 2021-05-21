@@ -15,8 +15,8 @@ export const NAV_DATA = [
     id: 'nav1c',
   },
   {
-    text: 'Контакты',
-    link: '#contacts',
+    text: 'Связаться',
+    link: '#footer',
     id: 'nav1d',
   },
 ];

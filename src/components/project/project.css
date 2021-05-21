@@ -41,8 +41,8 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   box-sizing: border-box;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 18px;
   text-align: justify;
   transition: ease-in-out .5s;
 }
@@ -92,5 +92,10 @@
   .project__link {
     font-size: 18px;
     line-height: 1;
+  }
+
+  .project__description {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
