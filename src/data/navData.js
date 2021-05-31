@@ -1,22 +1,25 @@
-export const NAV_DATA = [
+const NAV_DATA = [
   {
     text: 'Обо мне',
     link: '#description',
-    id: 'nav1a',
+    id: 'n0a',
   },
   {
     text: 'Мои навыки',
     link: '#perks',
-    id: 'nav1b',
+    id: 'n1b',
   },
   {
     text: 'Портфолио',
     link: '#portfolio',
-    id: 'nav1c',
+    id: 'n2c',
   },
   {
     text: 'Связаться',
     link: '#footer',
-    id: 'nav1d',
+    id: 'n3d',
   },
 ];
+
+
+export default NAV_DATA;

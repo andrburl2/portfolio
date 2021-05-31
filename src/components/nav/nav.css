@@ -66,51 +66,48 @@
   transition: .3s .3s;
 }
 
-.nav__button:active {
+.nav__button:active, .nav__button:focus {
   outline: none;
 }
 
-.nav__button::before {
+.nav__button::before, .nav__button::after {
   content: '';
   width: 50px;
   height: 6px;
   position: absolute;
-  top: -12px;
   left: 0;
   background-color: #fff;
   border-radius: 20px;
   transition: top .3s .3s, transform .3s;
 }
+
+.nav__button::before{
+  top: -12px;
+}
+
 .nav__button::after {
-  content: '';
-  width: 50px;
-  height: 6px;
-  position: absolute;
   top: 12px;
-  left: 0;
-  background-color: #fff;
-  border-radius: 20px;
-  transition: top .3s .3s, transform .3s;
 }
 
 .nav__button_active {
   background: transparent;
 }
 
-.nav__button_active::before {
+.nav__button_active::before, .nav__button_active::after {
   top: 0;
-  transform: rotate(-45deg);
   transition: top .3s, transform .3s .3s;
 }
+
+.nav__button_active::before {
+  transform: rotate(-45deg);
+}
+
 .nav__button_active::after {
-  top: 0;
   transform: rotate(45deg);
-  transition: top .3s, transform .3s .3s;
 }
 
 @media screen and (max-width: 500px) {
   .nav__list {
-    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;

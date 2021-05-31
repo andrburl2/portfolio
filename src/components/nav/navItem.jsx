@@ -2,21 +2,7 @@ import React, { Component } from 'react';
 import hexagon from '../../images/hexagon.svg'; 
 
 export default class NavItem extends Component {
-  smoothScroll = (e) => {
-    e.preventDefault();
-
-    const blockHeight = document.getElementById(this.props.link.substr(1)).offsetTop;
-
-    this.props.handleClick();
-    
-    window.scrollTo ({
-      top: (blockHeight-60),
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  render () {
+  render() {
     const { text, link } = this.props;
 
     return (
@@ -25,5 +11,20 @@ export default class NavItem extends Component {
         <img className="nav__hexagon" src={hexagon} alt="hexagon"></img>
       </li>
     )
+  }
+
+  smoothScroll = (e) => {
+    e.preventDefault();
+
+    const blockHeight = document.getElementById(this.props.link.substr(1)).offsetTop;
+    const navHeight = document.querySelector('.header').scrollHeight;
+
+    this.props.handleClick();
+    
+    window.scrollTo ({
+      top: (blockHeight-navHeight),
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Project from '../project/project.jsx'
-import { PROJECTS_DATA } from '../../data/projectData.js'
+import PROJECT_DATA from '../../data/projectData.js'
 import './portfolio.css';
 
 export default class Portfolio extends Component {
@@ -10,7 +10,7 @@ export default class Portfolio extends Component {
         <h2 className="portfolio__title">Портфолио</h2>
 
         <div className="portfolio__container">
-          {PROJECTS_DATA.map(el => {
+          {PROJECT_DATA.map(el => {
             return (
               <Project key={el.id} project={el} />
             )

@@ -1,33 +1,23 @@
 import React, { Component } from 'react';
 import NavItem from './navItem.jsx';
-import { NAV_DATA } from '../../data/navData.js'
+import NAV_DATA from '../../data/navData.js'
 import './nav.css';
 
 export default class Nav extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       isClosed: true
     }
   }
 
-  toggleNav = () => {
-    this.setState(state => ({
-      isClosed: !state.isClosed
-    }));
-  }
-
-  closeNav = () => {
-    this.setState(state => ({
-      isClosed: true
-    }));
-  }
-
-  render () {
+  render() {
     return (
       <nav className="nav">
         <button className={this.state.isClosed ? "nav__button" : "nav__button nav__button_active"}
-          onClick={this.toggleNav}>
+          onClick={this.toggleNav}
+          alt="Открыть навигацию"
+          title="Навигация">
         </button>
 
         <ul className={this.state.isClosed ? "nav__list nav__list_hidden" : "nav__list"}>
@@ -44,5 +34,17 @@ export default class Nav extends Component {
         </ul>
       </nav>
     )
+  }
+
+  toggleNav = () => {
+    this.setState(state => ({
+      isClosed: !state.isClosed
+    }));
+  }
+
+  closeNav = () => {
+    this.setState({
+      isClosed: true
+    });
   }
 }

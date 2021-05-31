@@ -10,7 +10,7 @@ import instIcon from '../../images/icon/instagram.png';
 import './footer.css';
 
 class Footer extends Component {
-  render () {
+  render() {
     return (
       <footer className="footer" id="footer">
         <div className="footer__container">

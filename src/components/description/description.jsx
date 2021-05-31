@@ -1,52 +1,43 @@
 import React, { Component } from 'react';
-import me from '../../images/me.jpg';
+import DescriptionBlock from './descriptionBlock.jsx';
+import DESCRIPTION_DATA from '../../data/descriptionData';
 import './description.css';
 
 export default class Description extends Component {
-  render () {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scroll: window.pageYOffset
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.getScroll);
+  }
+  
+  render() {
     return (
       <section className="description" id="description">
-        <img src={me} className="description__img" alt="Моя фотография" />
-
+        <h2 className="description__title">Обо мне</h2>
+        
         <div className="description__container">
-          <h2 className="description__title">Обо мне</h2>
-
-          <p className="description__text">
-            Привет, меня зовут Андрей Бурлаков. Я начинающий веб-разработчик. 
-            Создаю сайты с использованием React или на чистых HTML, CSS и JS. 
-            Ищу работу, на которой я принесу пользу, наберусь опыта и научусь новому. 
-            Работаю удаленно или в офисе в Нижегородской области.
-          </p>
-          <p className="description__text">
-            <b>Технологии.</b> Знаю семантическую верстку HTML5, CSS3 и JS. 
-            В проектах применяю новые стили и стандарт ES6, поэтому для совместимости 
-            использую Babel и Webpack. В последних проектах использую React. Создаю сервера на Node.js.
-          </p>
-          <p className="description__text">
-            <b>Образование.</b> Я закончил курс веб-разработчика Яндекс Практикума. 
-            Обучаясь, я научился создавать сайты и написал 3 проекта для портфолио. 
-            React изучил сам. Также я учился на тестовых заданиях, небольших js-задачках.
-          </p>
-          <p className="description__text">
-            <b>Опыт работы.</b> Его мало. 3 месяца я работал в небольшой веб-студии. 
-            За это время сверстал интернет-магазин из тридцати страниц и написал часть 
-            скриптов для него за месяц, также сделал пару landing-ов.
-          </p>
-          <p className="description__text">
-            <b>Личностные качества.</b> Я усидчивый и старательный - на прошлой работе один проект 
-            сделал без перерывов, чтобы успеть к дедлайну. Также аккуратный и прилежный ученик - 
-            в школе средний балл был равен 4,75, а техникум закончил с красным дипломом. 
-            Из минусов отмечу, что я привыкаю к людям и новой обстановке пару недель, 
-            а общение дается мне непросто.
-          </p>
-          <p className="description__text">
-            Я люблю программировать, и я хочу развиваться в IT-мире, 
-            работать, учиться и создавать высококачественные продукты. 
-            Для меня это важнее, чем высокая зарплата. Свяжитесь со мной любым способом, 
-            если я заинтересовал вас.
-          </p>
+          {DESCRIPTION_DATA.map(el => {
+            return (
+              <DescriptionBlock
+                block={el}
+                scroll={this.state.scroll}
+                key={el.id}
+              />
+            )
+          })}
         </div>
        </section>
     )
+  }
+
+  getScroll = () => {
+    this.setState({
+      scroll: window.pageYOffset
+    })
   }
 }

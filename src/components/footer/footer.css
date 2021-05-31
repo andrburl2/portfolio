@@ -143,3 +143,19 @@
     line-height: 1;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__container {
+    margin: 0 0 10px;
+  }
+
+  .footer__container:last-of-type {
+    margin: 0;
+  }
+}

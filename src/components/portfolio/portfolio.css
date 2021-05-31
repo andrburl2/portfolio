@@ -1,7 +1,7 @@
 .portfolio {
   width: 100%;
   margin: 0;
-  padding: 30px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .portfolio__title {
-  margin: 0 0 30px;
+  margin: 0 0 25px;
   font-size: 40px;
   font-weight: 600;
   line-height: 1;
@@ -53,5 +53,11 @@
 @media screen and (max-width: 600px) {
   .portfolio__container {
     grid-template: auto/auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .portfolio__title {
+    margin: 0 0 15px;
   }
 }
