@@ -11,8 +11,10 @@ export default class DescriptionBlock extends Component {
   render() {
     const { block, scroll } = this.props;
 
+    console.log(this.state.height);
+
     return (
-      <div id={block.id} className={this.state.height <= scroll*2 ?
+      <div id={block.id} className={this.state.height <= scroll+(window.innerHeight/1.7) ?
         "description__block description__block_visible" :
         "description__block"}
         onLoad={this.getHeight}
