@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Perk from './perk.jsx';
+import PerkBlock from './perkBlock/perkBlock.jsx';
 import './perks.css';
 
 export default class Perks extends Component {
@@ -7,67 +7,103 @@ export default class Perks extends Component {
     super(props);
 
     this.state = {
-      actived: 0,
+      selected: 0
     }
   }
 
   render() {
-    const {actived} = this.state;
+    const { selected } = this.state;
 
     return (
-      <section className="perks" id="perks">
-        <h2 className="perks__title">Мои навыки</h2>
+      <section className="block perks" id="perks">
+        <h2 className="block__title">Мои навыки</h2>
 
-        <div className="perks__container" onMouseDown={this.DND}>
-          <button className="perk__arrow perk__arrow_prev" title="Предыдущий" onClick={this.prevPerk}></button>
+        <div className="perks__container">
+          <button
+            className="perks__arrow perks__arrow_position_left"
+            title="Предыдущий навык"
+            onClick={this.prevPerk}
+          >
+          </button>
 
-          <Perk
+          <PerkBlock
             active={false}
-            perk={actived === 0 ?
+            perk={selected === 0 ?
               this.props.data[this.props.data.length-1] :
-              this.props.data[actived-1]}
+              this.props.data[selected-1]}
             handleClick={this.prevPerk}
           />
 
-          <Perk active={true} perk={this.props.data[actived]}/>
+          <PerkBlock
+            active={true}
+            perk={this.props.data[selected]}
+          />
 
-          <Perk
+          <PerkBlock
             active={false}
-            perk={actived === (this.props.data.length-1) ? 
+            perk={selected === (this.props.data.length-1) ? 
               this.props.data[0] :
-              this.props.data[actived+1]}
+              this.props.data[selected+1]}
             handleClick={this.nextPerk}
           />
 
-          <button className="perk__arrow perk__arrow" title="Следующий" onClick={this.nextPerk}></button>
+          <button
+            className="perks__arrow perks__arrow_position_right"
+            title="Следующий навык"
+            onClick={this.nextPerk}
+          >
+          </button>
         </div>
 
-        <p className="perks__subtitle">{this.props.data[actived].text}</p>
+        <p className="perks__subtitle">{this.props.data[selected].text}</p>
       </section>
     )
   }
 
+  componentDidMount = () => {
+    window.addEventListener('keydown', this.togglePerk);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('keydown', this.togglePerk);
+  }
+
   nextPerk = () => {
-    if (this.state.actived === (this.props.data.length-1)) {
+    if (this.state.selected === (this.props.data.length-1)) {
       this.setState({
-        actived: 0,
+        selected: 0
       });
     } else {
       this.setState(state => ({
-        actived: state.actived+1,
+        selected: state.selected+1
       }));
     }    
   }
 
   prevPerk = () => {
-    if (this.state.actived === 0) {
+    if (this.state.selected === 0) {
       this.setState({
-        actived: this.props.data.length-1,
+        selected: this.props.data.length-1
       });
     } else {
       this.setState(state => ({
-        actived: state.actived-1,
+        selected: state.selected-1
       }));
+    }
+  }
+
+  togglePerk = (e) => {
+    switch (e.keyCode) {
+      case 37:
+        this.prevPerk()
+        break;
+
+      case 39:
+        this.nextPerk()
+        break;
+
+      default:
+        break;
     }
   }
 }

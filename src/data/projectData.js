@@ -6,7 +6,8 @@ import funbox from '../images/projects/funbox_test.png';
 const PROJECT_DATA = [
   {
     title: 'Научиться учиться',
-    description: 'Первый созданный мной сайт. Простой landing, в котором используются семантическая верстка и простые стили css, пока без адаптаиции.',
+    description: `Первый созданный мной сайт. Простой landing, в котором используются
+    семантическая верстка и простые стили css, пока без адаптации.`,
     img: learn,
     ghPage: 'https://andrburl2.github.io/Learn-to-learn/',
     ghLink: 'https://github.com/andrburl2/Learn-to-learn',
@@ -14,7 +15,8 @@ const PROJECT_DATA = [
   },
   {
     title: 'Путешествия по России',
-    description: 'Развитие моих навыков. Landing стал больше, появились новые теги, расширены стили и главное - добавлена адаптация для разных экранов.',
+    description: `Развитие моих навыков. Landing стал больше, появились новые теги,
+      расширены стили и главное - добавлена адаптация для разных экранов.`,
     img: travel,
     ghPage: 'https://andrburl2.github.io/Travel-to-Russia/',
     ghLink: 'https://github.com/andrburl2/Travel-to-Russia',
@@ -22,7 +24,9 @@ const PROJECT_DATA = [
   },
   {
     title: 'NewsMachine',
-    description: 'Дипломная работа. Создание проекта без подсказок опираясь только на собственный опыт. Адаптация и семантика, появился js. Также написал сервер на Node.js для регистрации пользователей и сохранения статей.',
+    description: `Дипломная работа. Создание проекта без подсказок опираясь только на собственный опыт.
+      Адаптация и семантика, появился js. Также написал сервер на Node.js для регистрации пользователей
+      и сохранения статей.`,
     img: news,
     ghPage: 'https://andrburl2.github.io/news-machine-frontend/',
     ghLink: 'https://github.com/andrburl2/news-machine-frontend',
@@ -30,7 +34,7 @@ const PROJECT_DATA = [
   },
   {
     title: 'Нямушка',
-    description: 'Тестовое задание. Написал сайт на React, по стандарту использовал семантику и адаптив.',
+    description: `Тестовое задание. Написал сайт на React, по стандарту использовал семантику и адаптив.`,
     img: funbox,
     ghPage: 'https://andrburl2.github.io/funbox-test/',
     ghLink: 'https://github.com/andrburl2/funbox-test',

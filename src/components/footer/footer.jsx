@@ -9,7 +9,7 @@ import fbIcon from '../../images/icon/facebook.png';
 import instIcon from '../../images/icon/instagram.png';
 import './footer.css';
 
-class Footer extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <footer className="footer" id="footer">
@@ -19,26 +19,30 @@ class Footer extends Component {
           <a href="https://github.com/andrburl2"
             className="footer__link footer__link_type_contact"
             target="_blank" rel="noopener noreferrer"
-            title="Мой профиль в Github">
+            title="Мой профиль в Github"
+          >
             <img src={githubIcon} alt="Иконка github" className="footer__icon" />
             Github
           </a>
           <a href="mailto:andrburl2@yandex.ru"
-            className="footer__link footer__link_type_contact footer__link_logo footer__link_logo_mail"
-            title="Моя почта для связи">
+            className="footer__link footer__link_type_contact"
+            title="Моя почта для связи"
+          >
             <img src={mailIcon} alt="Почта" className="footer__icon" />
             andrburl2@yandex.ru
           </a>
           <a href="https://t.me/andrburl2"
-            className="footer__link footer__link_type_contact footer__link_logo footer__link_logo_telegram"
+            className="footer__link footer__link_type_contact"
             target="_blank" rel="noopener noreferrer"
-            title="Telegram">
+            title="Telegram"
+          >
             <img src={tgIcon} alt="Иконка Telegram" className="footer__icon" />
             Telegram
           </a>
           <a href="tel:+79524413698"
-            className="footer__link footer__link_type_contact footer__link_logo footer__link_logo_phone"
-            title="Мой номер телефона">
+            className="footer__link footer__link_type_contact"
+            title="Мой номер телефона"
+          >
             <img src={phoneIcon} alt="Телефон" className="footer__icon" />
             89524413698
           </a>
@@ -48,26 +52,26 @@ class Footer extends Component {
           <h2 className="footer__title">Соцсети</h2>
 
           <a href="https://vk.com/andrburl2"
-            className="footer__link footer__link_type_contact footer__link_logo footer__link_logo_vk"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="ВКонтакте">
+            className="footer__link footer__link_type_contact"
+            target="_blank" rel="noopener noreferrer"
+            title="ВКонтакте"
+          >
             <img src={vkIcon} alt="Иконка Вконтакте" className="footer__icon" />
             ВКонтакте
           </a>
           <a href="https://www.facebook.com/andrburl2"
-            className="footer__link footer__link_type_contact footer__link_logo footer__link_logo_fb"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Facebook">
+            className="footer__link footer__link_type_contact"
+            target="_blank" rel="noopener noreferrer"
+            title="Facebook"
+          >
             <img src={fbIcon} alt="Иконка Facebook" className="footer__icon" />
             Facebook
           </a>
           <a href="https://www.instagram.com/andrburl2/"
-            className="footer__link footer__link_type_contact footer__link_logo footer__link_logo_inst"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Instagram">
+            className="footer__link footer__link_type_contact"
+            target="_blank" rel="noopener noreferrer"
+            title="Instagram"
+          >
             <img src={instIcon} alt="Иконка Instagram" className="footer__icon" />
             Instagram
           </a>
@@ -81,15 +85,13 @@ class Footer extends Component {
               className="footer__link"
               href="https://www.freepik.com"
               title="Freepik"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
             >Freepik</a><br />
             и взяты с <a
               className="footer__link"
               href="https://www.flaticon.com/"
               title="Flaticon"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
             >www.flaticon.com</a>
           </p>
 
@@ -100,8 +102,7 @@ class Footer extends Component {
               className="footer__link"
               href="https://fontstorage.com/ru/font/julieta-ulanovsky/montserrat"
               title="Ссылка на шрифт"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
             >
               fontstorage.com
             </a>
@@ -113,5 +114,3 @@ class Footer extends Component {
     )
   }
 }
-
-export default Footer;

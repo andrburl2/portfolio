@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import NavItem from './navItem.jsx';
+import NavItem from './navItem/navItem.jsx';
 import NAV_DATA from '../../data/navData.js'
 import './nav.css';
 
 export default class Nav extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       isClosed: true
     }
@@ -14,9 +15,9 @@ export default class Nav extends Component {
   render() {
     return (
       <nav className="nav">
-        <button className={this.state.isClosed ? "nav__button" : "nav__button nav__button_active"}
+        <button
+          className={this.state.isClosed ? "nav__button" : "nav__button nav__button_active"}
           onClick={this.toggleNav}
-          alt="Открыть навигацию"
           title="Навигация">
         </button>
 
