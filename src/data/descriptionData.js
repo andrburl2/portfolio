@@ -22,7 +22,7 @@ const DESCRIPTION_DATA = [
     img: work,
     alt: 'Картинка программист',
     isReversed: true,
-    id: 'd3b',
+    id: 'd1b',
   },
   {
     title: 'Личностные качества.',

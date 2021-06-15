@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './project.css';
 
 export default class Project extends Component {
   render() {
@@ -9,9 +8,9 @@ export default class Project extends Component {
       <div className="project">
         <h3 className="project__title">{project.title}</h3>
 
-        <div className="project__img-container">
+        <div className="project__container">
           <img src={project.img} alt="Фото проекта" className="project__img"/>
-          <p className="project__description">{project.description}</p>
+          <p className="project__text">{project.description}</p>
         </div>
 
         <ul className="project__link-row">

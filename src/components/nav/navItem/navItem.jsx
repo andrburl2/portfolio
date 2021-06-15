@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import hexagon from '../../images/hexagon.svg'; 
+import hexagon from '../../../images/hexagon.svg'; 
 
 export default class NavItem extends Component {
   render() {
