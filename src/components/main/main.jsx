@@ -1,18 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Greeting from '../greeting/greeting.jsx';
+import Description from '../description/description.jsx';
 import Portfolio from '../portfolio/portfolio.jsx';
 import Perks from '../perks/perks.jsx';
-import Description from '../description/description.jsx';
-import Contacts from '../contacts/contacts.jsx';
+import PERK_DATA from '../../data/perkData.js';
 import './main.css';
 
 export default class Main extends Component {
-  render () { 
+  render() { 
     return (
       <main className="main">
+        <Greeting />
         <Description />
-        <Perks />
+        <Perks data={PERK_DATA}/>
         <Portfolio />
-        <Contacts />
       </main>
     )
   }

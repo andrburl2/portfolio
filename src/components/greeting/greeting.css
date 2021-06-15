@@ -1,0 +1,104 @@
+.greeting {
+  width: 100%;
+  height: calc(100vh - 60px);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  animation: changeBg 25s ease infinite;
+}
+
+.greeting__container {
+  display: flex;
+  align-items: center;
+}
+
+.greeting__img {
+  width: 300px;
+  max-height: 300px;
+  margin: 0 40px 0 0;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 25px;
+}
+
+.greeting__title {
+  margin: 0;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: #000 3px 3px 2px;
+}
+
+@media screen and (max-width: 1024px) {
+  .greeting__img {
+    width: 250px;
+    max-height: 250px;
+    margin: 0 20px 0 0;
+  }
+
+  .greeting__title {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .greeting {
+    padding: 0 10px;
+  }
+
+  .greeting__container {
+    flex-direction: column-reverse;
+  }
+
+  .greeting__img {
+    width: 300px;
+    max-height: 300px;
+    margin: 0;
+  }
+
+  .greeting__title {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .greeting__img {
+    width: 100%;
+    max-height: auto;
+    margin: 0;
+  }
+
+  .greeting__title {
+    font-size: 28px;
+  }
+}
+
+@keyframes changeBg {
+  from {
+    background-image: url('../../images/greeting/xcom.jpg');
+  }
+  20% {
+    background-image: url('../../images/greeting/sur.jpg');
+  }
+  40% {
+    background-image: url('../../images/greeting/sunset.jpg');
+  }
+  60% {
+    background-image: url('../../images/greeting/space.jpg');
+  }
+  80% {
+    background-image: url('../../images/greeting/medieval_city.jpg');
+  }
+  to {
+    background-image: url('../../images/greeting/xcom.jpg');
+  }
+}

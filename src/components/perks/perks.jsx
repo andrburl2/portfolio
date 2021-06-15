@@ -1,23 +1,109 @@
 import React, { Component } from 'react';
+import PerkBlock from './perkBlock/perkBlock.jsx';
 import './perks.css';
 
 export default class Perks extends Component {
-  render() {
-    return (
-      <section className="perks" id="perks">
-        <h2 className="perks__title">Мои навыки</h2>
+  constructor(props) {
+    super(props);
 
-        <div className="perks__grid-container">
-          <p className="perk">HTML5</p>
-          <p className="perk">CSS3</p>
-          <p className="perk">JS</p>
-          <p className="perk">React</p>
-          <p className="perk">WebPack</p>
-          <p className="perk">Git</p>
-          <p className="perk">ООП</p>
-          <p className="perk">БЭМ</p>
+    this.state = {
+      selected: 0
+    }
+  }
+
+  render() {
+    const { selected } = this.state;
+
+    return (
+      <section className="block perks" id="perks">
+        <h2 className="block__title">Мои навыки</h2>
+
+        <div className="perks__container">
+          <button
+            className="perks__arrow perks__arrow_position_left"
+            title="Предыдущий навык"
+            onClick={this.prevPerk}
+          >
+          </button>
+
+          <PerkBlock
+            active={false}
+            perk={selected === 0 ?
+              this.props.data[this.props.data.length-1] :
+              this.props.data[selected-1]}
+            handleClick={this.prevPerk}
+          />
+
+          <PerkBlock
+            active={true}
+            perk={this.props.data[selected]}
+          />
+
+          <PerkBlock
+            active={false}
+            perk={selected === (this.props.data.length-1) ? 
+              this.props.data[0] :
+              this.props.data[selected+1]}
+            handleClick={this.nextPerk}
+          />
+
+          <button
+            className="perks__arrow perks__arrow_position_right"
+            title="Следующий навык"
+            onClick={this.nextPerk}
+          >
+          </button>
         </div>
+
+        <p className="perks__subtitle">{this.props.data[selected].text}</p>
       </section>
     )
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('keydown', this.togglePerk);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('keydown', this.togglePerk);
+  }
+
+  nextPerk = () => {
+    if (this.state.selected === (this.props.data.length-1)) {
+      this.setState({
+        selected: 0
+      });
+    } else {
+      this.setState(state => ({
+        selected: state.selected+1
+      }));
+    }    
+  }
+
+  prevPerk = () => {
+    if (this.state.selected === 0) {
+      this.setState({
+        selected: this.props.data.length-1
+      });
+    } else {
+      this.setState(state => ({
+        selected: state.selected-1
+      }));
+    }
+  }
+
+  togglePerk = (e) => {
+    switch (e.keyCode) {
+      case 37:
+        this.prevPerk()
+        break;
+
+      case 39:
+        this.nextPerk()
+        break;
+
+      default:
+        break;
+    }
   }
 }

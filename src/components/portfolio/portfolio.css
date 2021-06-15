@@ -1,22 +1,11 @@
+@import './project/project.css';
+
 .portfolio {
-  width: 100%;
-  margin: 0;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   background-image: url('../../images/background.jpg');
   background-size: cover;
   background-repeat: repeat;
   color: #fff;
-}
-
-.portfolio__title {
-  margin: 0 0 30px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1;
 }
 
 .portfolio__container {
@@ -30,23 +19,9 @@
 }
 
 @media screen and (max-width: 850px) {
-  .portfolio {
-    padding: 20px;
-  }
-
-  .portfolio__title {
-    margin: 0 0 20px;
-  }
-
   .portfolio__container {
-    grid-gap: 20px;
     grid-template: auto/repeat(2, calc(50% - 10px));
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .portfolio {
-    padding: 20px 10px;
+    grid-gap: 20px;
   }
 }
 

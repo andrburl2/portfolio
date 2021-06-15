@@ -1,6 +1,10 @@
+@import './navItem/navItem.css';
+
 .nav {
   width: auto;
   display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .nav__list {
@@ -14,44 +18,99 @@
   list-style-type: none;
 }
 
-.nav__item {
-  margin: 0 30px 0 0;
-  display: flex;
-  box-sizing: content-box;
-  position: relative;
-  cursor: pointer;
-}
-
-.nav__item:last-of-type {
-  margin: 0;
-}
-
-.nav__link {
-  margin: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 16px;
-  text-decoration: none;
-  color: #fff; 
-}
-
-.nav__hexagon {
+.nav__button {
   width: 50px;
-  height: 50px;
+  height: 6px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  transition: .3s .3s;
+}
+
+.nav__button:active, .nav__button:focus {
+  outline: none;
+}
+
+.nav__button::before, .nav__button::after {
+  content: '';
+  width: 50px;
+  height: 6px;
   position: absolute;
-  top: calc(50% - 25px);
-  left: calc(50% - 25px);
-  opacity: 0;
-  transition: ease-in-out 1s;
-  z-index: -1;
+  left: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: top .3s .3s, transform .3s;
 }
 
-.nav__item:hover .nav__hexagon {
-  opacity: .8;
+.nav__button::before{
+  top: -12px;
 }
 
-@media screen and (max-width: 850px) {
-  .nav {
-    display: none;
+.nav__button::after {
+  top: 12px;
+}
+
+.nav__button_active {
+  background: transparent;
+}
+
+.nav__button_active::before, .nav__button_active::after {
+  top: 0;
+  transition: top .3s, transform .3s .3s;
+}
+
+.nav__button_active::before {
+  transform: rotate(-45deg);
+}
+
+.nav__button_active::after {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+  .nav__list {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #2f2c2f;
+    transition: .65s ease-in-out;
+    opacity: 1;
+  }
+
+  .nav__list_hidden {
+    top: -100vh;
+    opacity: 0;
+  }
+
+  .nav__item {
+    margin: 0 0 20px;
+  }
+
+  .nav__item:last-of-type {
+    margin: 0 0 20px;
+  }
+  
+  .nav__link {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .nav__hexagon {
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+  }
+  
+  .nav__button {
+    display: block;
   }
 }
