@@ -1,7 +1,7 @@
 .nav__item {
   margin: 0 30px 0 0;
   display: flex;
-  box-sizing: content-box;
+  box-sizing: border-box;
   position: relative;
   cursor: pointer;
 }
@@ -12,24 +12,35 @@
 
 .nav__link {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1;
   text-decoration: none;
-  color: #fff; 
+  color: #fff;
+  position: relative;
+  display: inline-block;
 }
 
-.nav__hexagon {
+.nav__link::after {
+  content: '';
   width: 40px;
   height: 40px;
   position: absolute;
   top: calc(50% - 20px);
   left: calc(50% - 20px);
+  background-image: url(../../../images/hexagon.svg);
+  background-size: cover;
   opacity: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out .5s;
   z-index: -1;
 }
 
-.nav__item:hover .nav__hexagon {
+.nav__item:hover .nav__link::after {
   opacity: .8;
+}
+
+@media screen and (max-width:600px) {
+  .nav__item {
+    margin: 0 0 20px;
+  }  
 }

@@ -21,5 +21,4 @@ const NAV_DATA = [
   },
 ];
 
-
 export default NAV_DATA;

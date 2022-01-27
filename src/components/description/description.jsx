@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import DescriptionBlock from './descriptionBlock/descriptionBlock.jsx';
-import DESCRIPTION_DATA from '../../data/descriptionData';
+import React, { PureComponent } from 'react';
 import './description.css';
+import DESCRIPTION_DATA from '../../data/descriptionData';
 
-export default class Description extends Component {
+import DescriptionBlock from './descriptionBlock/descriptionBlock.jsx';
+
+class Description extends PureComponent {
   constructor(props) {
     super(props);
     
@@ -11,13 +12,27 @@ export default class Description extends Component {
       scroll: window.pageYOffset
     }
   }
-  
+
+  getScroll = () => {
+    this.setState({
+      scroll: window.pageYOffset
+    });
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.getScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.getScroll);
+  }
+
   render() {
     return (
-      <section className="block description" id="description">
-        <h2 className="block__title">Обо мне</h2>
+      <section className='block description' id='description'>
+        <h2 className='block__title'>Обо мне</h2>
         
-        <div className="description__container">
+        <div className='description__container'>
           {DESCRIPTION_DATA.map(el => {
             return (
               <DescriptionBlock
@@ -31,18 +46,6 @@ export default class Description extends Component {
       </section>
     )
   }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.getScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.getScroll);
-  }
-
-  getScroll = () => {
-    this.setState({
-      scroll: window.pageYOffset
-    });
-  }
 }
+
+export default Description;

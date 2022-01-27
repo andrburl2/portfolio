@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import Project from './project/project.jsx'
-import PROJECT_DATA from '../../data/projectData.js'
+import React, { PureComponent } from 'react';
 import './portfolio.css';
+import PROJECT_DATA from '../../data/projectData.js';
 
-export default class Portfolio extends Component {
+import Project from './project/project.jsx';
+
+class Portfolio extends PureComponent {
   render() {
     return (
       <section className="block portfolio" id="portfolio">
@@ -20,3 +21,5 @@ export default class Portfolio extends Component {
     );
   }
 }
+
+export default Portfolio;
