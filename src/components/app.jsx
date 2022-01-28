@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import Header from './header/header.jsx';
-import Main from './main/main.jsx';
-import Footer from './footer/footer.jsx'
+import Header from './Header/Header.jsx';
+import Main from './Main/Main.jsx';
+import Footer from './Footer/Footer.jsx'
 
 class App extends PureComponent {
   render() {

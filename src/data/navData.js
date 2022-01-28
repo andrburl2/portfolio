@@ -15,7 +15,7 @@ const NAV_DATA = [
     id: 'n2c',
   },
   {
-    text: 'Связаться',
+    text: 'Контакты',
     link: '#footer',
     id: 'n3d',
   },

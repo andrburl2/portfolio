@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './perkBlock.css';
 
 class PerkBlock extends PureComponent {
   render() {

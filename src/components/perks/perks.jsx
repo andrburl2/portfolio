@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import './perks.css';
 
-import PerkBlock from './perkBlock/perkBlock.jsx';
+import PerkBlock from './PerkBlock/PerkBlock.jsx';
 
 class Perks extends PureComponent {
   constructor(props) {

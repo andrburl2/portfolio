@@ -40,6 +40,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
+  text-align: center;
 }
 
 .footer__text:last-of-type {
@@ -47,7 +48,6 @@
 }
 
 .footer__link {
-  margin: 0;
   font-size: 18px;
   font-weight: 400;
   font-style: italic;
@@ -56,35 +56,10 @@
   color: #ff3700;
   cursor: pointer;
   transition: ease-in-out .6s;
-  position: relative;
 }
 
 .footer__link:hover {
   text-decoration: underline;
-}
-
-.footer__link_type_contact {
-  margin: 0 0 10px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.footer__link_type_contact:last-of-type {
-  margin: 0;
-}
-
-.footer__icon {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px 0 0;
-  object-fit: contain;
-}
-
-.footer__author {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.2;
 }
 
 @media screen and (max-width: 800px) {

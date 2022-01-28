@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './navItem.css';
 
 class NavItem extends PureComponent {
   smoothScroll = (e) => {

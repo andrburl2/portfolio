@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: .35s ease-in-out;
+  transition: .9s cubic-bezier(.2, .8, .4, 0.7);
 }
 
 .description__block:last-of-type {

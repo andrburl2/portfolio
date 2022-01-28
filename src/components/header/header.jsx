@@ -3,7 +3,7 @@ import './header.css';
 
 import logo from '../../images/code_logo.svg';
 
-import Nav from '../nav/nav.jsx';
+import Nav from '../Nav/Nav.jsx';
 
 class Header extends PureComponent {
   scrollTop() {

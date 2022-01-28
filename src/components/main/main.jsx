@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './main.css';
 import PERK_DATA from '../../data/perkData.js';
 
-import Greeting from '../greeting/greeting.jsx';
-import Description from '../description/description.jsx';
-import Portfolio from '../portfolio/portfolio.jsx';
-import Perks from '../perks/perks.jsx';
+import Greeting from '../Greeting/Greeting.jsx';
+import Description from '../Description/Description.jsx';
+import Portfolio from '../Portfolio/Portfolio.jsx';
+import Perks from '../Perks/Perks.jsx';
 
 class Main extends Component {
   render() { 
