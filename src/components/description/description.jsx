@@ -9,12 +9,12 @@ function Description() {
   const refContainer = useRef(null); // контейнер для определения пересечения
 
   const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {    // при каждом пересечении меняет стейт
+    entries.forEach((entry) => {     // при пересечении меняет стейт пересечения, что вызовет выплывание текста 
       if (entry.isIntersecting ) {
         setIsIntersecting(true);
       }
     });
-  }, { threshold: [ .65 ] });
+  }, { threshold: [ .5 ] });  // это свойство означает, что функция сработает при пересечении половины блока с областью видимости
 
   useEffect(() => {
     observer.observe(refContainer.current);

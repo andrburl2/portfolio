@@ -1,0 +1,93 @@
+.skill {
+  max-width: 800px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #2f2c2f;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.skill__img {
+  min-width: 200px;
+  height: 200px;
+  margin: 0 15px 0 0;
+  object-fit: cover;
+}
+
+.skill__text-column {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill__title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.skill__progress-row {
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.skill__progress {
+  width: 200px;
+  height: 25px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  background-color: #ff3700;
+  box-sizing: border-box;
+}
+
+::-webkit-progress-bar {
+  background: #2f2c2f;
+}
+::-webkit-progress-value {
+  background: #ff3700;
+}
+::-moz-progress-bar {
+  background: #ff3700;
+}
+
+.skill__number {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ff3700;
+}
+
+.skill__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 1200px) {
+  .skill {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  .skill:last-of-type {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill {
+    flex-direction: column;
+  }
+
+  .skill__img {
+    margin: 0 0 15px;
+  }
+}

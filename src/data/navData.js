@@ -6,7 +6,7 @@ const NAV_DATA = [
   },
   {
     text: 'Мои навыки',
-    link: '#perks',
+    link: '#skills',
     id: 'n1b',
   },
   {
