@@ -17,7 +17,7 @@ class Project extends PureComponent {
         <ul className='project__link-row'>
           <li className='project__item'>
             <a
-              href={project.ghPage}
+              href={project.page}
               className='project__link'
               target='_blank'
               title='Сайт на gitub.pages'

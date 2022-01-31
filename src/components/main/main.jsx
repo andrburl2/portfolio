@@ -12,7 +12,7 @@ class Main extends PureComponent {
       <main className='main'>
         <Greeting    />
         <Description />
-        <Skills       />
+        <Skills      />
         <Portfolio   />
       </main>
     )

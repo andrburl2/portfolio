@@ -54,7 +54,7 @@ class Footer extends PureComponent {
             </a>
           </p>
 
-          <p className='footer__text'>&copy; Бурлаков Андрей. 2021</p>
+          <p className='footer__text'>&copy; Бурлаков Андрей. 2022</p>
         </div>
 
       </footer>
