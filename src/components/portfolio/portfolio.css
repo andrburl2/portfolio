@@ -1,10 +1,6 @@
-@import './project/project.css';
-
 .portfolio {
   align-items: center;
-  background-image: url('../../images/background.jpg');
-  background-size: cover;
-  background-repeat: repeat;
+  background: url('../../images/protfolio-bg.jpg') center/contain repeat;
   color: #fff;
 }
 
@@ -15,18 +11,26 @@
   padding: 0;
   display: grid;
   grid-template: auto/repeat(2, calc(50% - 20px));
-  grid-gap: 40px;
+  gap: 40px;
 }
 
 @media screen and (max-width: 850px) {
   .portfolio__container {
     grid-template: auto/repeat(2, calc(50% - 10px));
-    grid-gap: 20px;
+    gap: 20px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .portfolio__container {
+    max-width: 75%;
     grid-template: auto/auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio__container {
+    max-width: 100%;
+    gap: 30px;
   }
 }

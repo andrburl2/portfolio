@@ -1,37 +1,24 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import './descriptionBlock.css';
 
-export default class DescriptionBlock extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      height: 0
-    };
-  }
-
+class DescriptionBlock extends PureComponent {
   render() {
-    const { block, scroll } = this.props;
+    const { block, isIntersecting } = this.props;
     
     return (
       <div
-        id={block.id} className={this.state.height <= scroll+(window.innerHeight/1.5) ?
-          "description__block description__block_visible" :
-          "description__block"
-        }
+        id={block.id}
+        className={isIntersecting ? 'description__block description__block_visible' : 'description__block'}
         onLoad={this.getHeight}
       >
-        <p className="description__text">
+        <p className='description__text'>
           <b>{block.title}</b> {block.text}
         </p>
 
-        <img src={block.img} alt={block.alt} className="description__img"/>
+        <img className='description__img' src={block.img} alt={block.alt} />
       </div>
     )
   }
-
-  getHeight = () => {
-    this.setState({
-      height: document.getElementById(this.props.block.id).offsetTop
-    });
-  }
 }
+
+export default DescriptionBlock;

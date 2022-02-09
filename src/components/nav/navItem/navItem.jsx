@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
-import hexagon from '../../../images/hexagon.svg'; 
+import React, { PureComponent } from 'react';
+import './navItem.css';
 
-export default class NavItem extends Component {
-  render() {
-    const { text, link } = this.props;
-
-    return (
-      <li className="nav__item">
-        <a className="nav__link" href={link} onClick={this.smoothScroll}>{text}</a>
-        <img className="nav__hexagon" src={hexagon} alt="hexagon"></img>
-      </li>
-    )
-  }
-
+class NavItem extends PureComponent {
   smoothScroll = (e) => {
     e.preventDefault();
 
-    const blockHeight = document.getElementById(this.props.link.substr(1)).offsetTop;
-    const navHeight = document.querySelector('.header').scrollHeight;
+    const blockHeight = document.getElementById(this.props.link.substr(1)).offsetTop; // через ссылку получаем высоту нужного блока
+    const headerHeight = document.querySelector('.header').scrollHeight;              // вычисляем высоту header
 
-    this.props.handleClick();
+    this.props.closeMobileNav(); // закрываем навигацию, это нужно только для маленьких разрешений
     
     window.scrollTo ({
-      top: (blockHeight-navHeight),
+      top: (blockHeight-headerHeight), // скроллим до нужного блока, вычитая высоту header
       left: 0,
       behavior: 'smooth'
     });
   }
+
+  render() {
+    const { text, link } = this.props;
+
+    return (
+      <li className='nav__item'>
+        <a className='nav__link' href={link} onClick={this.smoothScroll}>{text}</a>
+      </li>
+    )
+  }
 }
+
+export default NavItem;

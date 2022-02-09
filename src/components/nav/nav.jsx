@@ -1,34 +1,47 @@
-import React, { Component } from 'react';
-import NavItem from './navItem/navItem.jsx';
-import NAV_DATA from '../../data/navData.js'
+import React, { PureComponent } from 'react';
 import './nav.css';
+import NAV_DATA from '../../data/navData.js';
 
-export default class Nav extends Component {
+import NavItem from './NavItem/NavItem.jsx';
+
+class Nav extends PureComponent {
   constructor(props) {
     super(props);
     
     this.state = {
-      isClosed: true
+      isMobileNavOpen: false
     }
+  }
+
+  toggleMobileNav = () => {
+    this.setState(state => ({
+      isMobileNavOpen: !state.isMobileNavOpen
+    }));
+  }
+
+  closeMobileNav = () => {
+    this.setState({
+      isMobileNavOpen: false
+    });
   }
 
   render() {
     return (
-      <nav className="nav">
+      <nav className='nav'>
         <button
-          className={this.state.isClosed ? "nav__button" : "nav__button nav__button_active"}
-          onClick={this.toggleNav}
-          title="Навигация">
+          className={this.state.isMobileNavOpen ? 'nav__button nav__button_active' : 'nav__button'}
+          onClick={this.toggleMobileNav}
+          title='Открыть навигацию'>
         </button>
 
-        <ul className={this.state.isClosed ? "nav__list nav__list_hidden" : "nav__list"}>
+        <ul className={this.state.isMobileNavOpen ? 'nav__list' : 'nav__list nav__list_hidden'}>
           {NAV_DATA.map(el => {
             return (
               <NavItem 
                 text={el.text}
                 link={el.link}
                 key={el.id}
-                handleClick={this.closeNav}
+                closeMobileNav={this.closeMobileNav}
               />
             )
           })}
@@ -36,16 +49,6 @@ export default class Nav extends Component {
       </nav>
     )
   }
-
-  toggleNav = () => {
-    this.setState(state => ({
-      isClosed: !state.isClosed
-    }));
-  }
-
-  closeNav = () => {
-    this.setState({
-      isClosed: true
-    });
-  }
 }
+
+export default Nav;

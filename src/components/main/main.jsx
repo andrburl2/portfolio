@@ -1,20 +1,22 @@
-import React, { Component } from 'react';
-import Greeting from '../greeting/greeting.jsx';
-import Description from '../description/description.jsx';
-import Portfolio from '../portfolio/portfolio.jsx';
-import Perks from '../perks/perks.jsx';
-import PERK_DATA from '../../data/perkData.js';
+import React, { PureComponent } from 'react';
 import './main.css';
 
-export default class Main extends Component {
+import Greeting from '../Greeting/Greeting.jsx';
+import Description from '../Description/Description.jsx';
+import Portfolio from '../Portfolio/Portfolio.jsx';
+import Skills from '../Skills/Skills.jsx';
+
+class Main extends PureComponent {
   render() { 
     return (
-      <main className="main">
-        <Greeting />
+      <main className='main'>
+        <Greeting    />
         <Description />
-        <Perks data={PERK_DATA}/>
-        <Portfolio />
+        <Skills      />
+        <Portfolio   />
       </main>
     )
   }
 }
+
+export default Main;
