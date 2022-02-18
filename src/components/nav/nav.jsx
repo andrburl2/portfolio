@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './nav.css';
 import NAV_DATA from '../../data/navData.js';
 
-import NavItem from './NavItem/NavItem.jsx';
+import NavItem from './NavItem/NavItem';
 
 class Nav extends PureComponent {
   constructor(props) {

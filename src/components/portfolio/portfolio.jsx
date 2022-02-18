@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './portfolio.css';
 import PROJECT_DATA from '../../data/projectData.js';
 
-import Project from './Project/Project.jsx';
+import Project from './Project/Project';
 
 class Portfolio extends PureComponent {
   render() {

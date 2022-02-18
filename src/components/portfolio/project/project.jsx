@@ -24,6 +24,7 @@ class Project extends PureComponent {
               rel='noreferrer'>Сайт
             </a>
           </li>
+
           <li className='project__item'>
             <a
               href={project.ghLink}
