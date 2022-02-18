@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './description.css';
 import DESCRIPTION_DATA from '../../data/descriptionData';
 
-import DescriptionBlock from './DescriptionBlock/DescriptionBlock.jsx';
+import DescriptionBlock from './DescriptionBlock/DescriptionBlock';
 
 function Description() {
   const [isIntersecting, setIsIntersecting] = useState(false);

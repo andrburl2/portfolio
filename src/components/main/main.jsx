@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import './main.css';
 
-import Greeting from '../Greeting/Greeting.jsx';
-import Description from '../Description/Description.jsx';
-import Portfolio from '../Portfolio/Portfolio.jsx';
-import Skills from '../Skills/Skills.jsx';
+import Greeting from '../Greeting/Greeting';
+import Description from '../Description/Description';
+import Portfolio from '../Portfolio/Portfolio';
+import Skills from '../Skills/Skills';
 
 class Main extends PureComponent {
   render() { 
